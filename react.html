@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="ICON/react.png" type="image/x-icon">
+    <title>React</title>
+</head>
+<body>
+    <style>
+
+        *{
+           text-decoration: none;
+       }
+       .navbar{
+         background-color: rgba(0, 53, 246, 0.658); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-right: 15px; padding-left: 15px;
+       }
+       .navdiv{
+       display: flex; align-items: center; justify-content: space-between;
+       }
+       .logo a{
+       font-size: 35px;font-weight: 600; color: yellow;
+       }
+       li {
+         list-style: none; display: inline-block;
+       }
+       li a{
+       color: yellow; font-size: 18px; font-weight: bold; margin-right: 25px;
+       }
+       *{
+           margin: 0px;
+           padding-bottom: 2px;
+           font-family: poppins;
+       }
+       body{
+           background-color:rgb(243, 243, 243);
+       }
+       
+       p{
+           font-size: larger;
+           color: black;
+           font-family: 'Gill Sans',;
+           width: 800px;
+       }
+
+    </style>
+
+    
+  <nav class="navbar">
+    <div class="navdiv">
+     <div class="logo"><a href="#">BlOGMASTER</a></div>
+     <ul>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="#">About</a></li>
+       <li><a href="#">Contact</a></li>
+       <li><a href="#">Account</a></li>
+     </ul>
+    </div>
+   </nav>
+ 
+   <main>
+    <h1>React Labs: What We've Been Working On – June 2022</h1>
+    <p>React 18 was years in the making, and with it brought valuable lessons for the React team. Its release was the result of many years of research and exploring many paths. Some of those paths were successful; many more were dead-ends that led to new insights. One lesson we’ve learned is that it’s frustrating for the community to wait for new features without having insight into these paths that we’re exploring.</p>
+   <br>
+   <h1>Server Components</h1>
+   <br>
+   <p>We announced an experimental demo of React Server Components (RSC) in December 2020. Since then we’ve been finishing up its dependencies in React 18, and working on changes inspired by experimental feedback.</p>
+   <br>
+   <p>In particular, we’re abandoning the idea of having forked I/O libraries (eg react-fetch), and instead adopting an async/await model for better compatibility. This doesn’t technically block RSC’s release because you can also use routers for data fetching. Another change is that we’re also moving away from the file extension approach in favor of annotating boundaries.</p>
+   <br>
+   <h1>Asset Loading</h1>
+   <br>
+   <p>Currently, assets like scripts, external styles, fonts, and images are typically preloaded and loaded using external systems. This can make it tricky to coordinate across new environments like streaming, server components, and more. We’re looking at adding APIs to preload and load deduplicated external assets through React APIs that work in all React environments.</p>
+<br>
+<h1>Static Server Rendering Optimizations</h1>
+<p>Static Site Generation (SSG) and Incremental Static Regeneration (ISR) are great ways to get performance for cacheable pages, but we think we can add features to improve performance of dynamic Server Side Rendering (SSR) – especially when most but not all of the content is cacheable. We’re exploring ways to optimize server rendering utilizing compilation and static passes.</p>
+</main>
+
+</body>
+</html>
