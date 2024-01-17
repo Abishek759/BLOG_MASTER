@@ -3,7 +3,7 @@
     text-decoration: none;
 }
 .navbar{
-  background-color: rgba(0, 53, 246, 0.658); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-right: 15px; padding-left: 15px;
+  background-color: rgba(0, 53, 246, 0.65); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-right: 15px; padding-left: 15px;
 }
 .navdiv{
 display: flex; align-items: center; justify-content: space-between;
