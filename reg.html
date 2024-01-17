@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+     <div class="container">
+     <div class="header">
+        <h2>Create Account</h2>
+     </div>
+
+   <form action="" class="form" id="form">
+     <div class="form-control">
+        <label for="">Username</label>
+        <input type="text" placeholder="username" id="username" required>
+       <small>Error</small>
+    </div>
+    <div class="form-control">
+        <label for="">Email</label>
+        <input type="email" placeholder="email@gmail.com" id="email" required>
+        <small>Error</small>
+        
+    </div>
+    <div class="form-control">
+     <label for="">Date Of Brith</label>
+     <input type="date" placeholder="54574dbb" id="date" required>
+     <small>Error</small>
+     
+ </div>
+    <div class="form-control">
+        <label for="">Password</label>
+        <input type="password" placeholder="54574dbb" id="Password" required>
+        <small>Error</small>
+    </div>
+    <div class="form-control">
+        <label for="">Confrim Password</label>
+        <input type="password" placeholder="password" id="password2" required>
+        <small>Error</small>
+     </div>
+    <button onclick="done()">Submit</button>
+    </form>
+     </div>
+     <script>
+      function done()
+      {
+         alert("Done")
+         window.location= "index.html"
+      }
+     </script>
+</body>
+</html>
