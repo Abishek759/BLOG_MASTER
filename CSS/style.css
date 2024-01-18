@@ -17,6 +17,10 @@ li {
 li a{
 color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
 }
+li a:hover{
+     
+     color: yellow;
+}
 <!--Nav bar End--->
 
 *{

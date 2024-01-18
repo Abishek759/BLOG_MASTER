@@ -1,54 +1,68 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Registration Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index1.css">
+    <script defer src="index.js"></script>
 </head>
 <body>
-     <div class="container">
-     <div class="header">
-        <h2>Create Account</h2>
-     </div>
+    <div class="container">
+        <form id="form" action="/">
+            <h1>Registration Page</h1>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" placeholder="username">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text" placeholder="demo@gmail.com">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Dob</label>
+                <input id="date" name="email" type="date" >
+                <div class="error"></div>
+            </div>
+          <div class="input-control">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="" placeholder="9857412547">
+          </div>
+            <div class="input-control">
+            <label for="email">Gender</label>
+               <select name="" id="select">
+               <option  value="">None</option>
+               <option value="">Male</option>
+               <option value="">Female</option>
+               </select>
+                <div class="error"></div>
+            </div>
 
-   <form action="" class="form" id="form">
-     <div class="form-control">
-        <label for="">Username</label>
-        <input type="text" placeholder="username" id="username" required>
-       <small>Error</small>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password" placeholder="Password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2">Confirm Password</label>
+                <input id="password2"name="password2" type="password" placeholder="Confirm Password">
+                <div class="error"></div>
+            </div>
+            <button   onclick="done()"  id="btn"  type="submit">Sign Up</button>
+        </form>
+        <script>
+             function done()
+             {  
+                 alert("If Input Box Green Your Data Valid Go To login Page Otherwise Not Valid ");
+                }
+
+              
+        </script>
     </div>
-    <div class="form-control">
-        <label for="">Email</label>
-        <input type="email" placeholder="email@gmail.com" id="email" required>
-        <small>Error</small>
-        
-    </div>
-    <div class="form-control">
-     <label for="">Date Of Brith</label>
-     <input type="date" placeholder="54574dbb" id="date" required>
-     <small>Error</small>
-     
- </div>
-    <div class="form-control">
-        <label for="">Password</label>
-        <input type="password" placeholder="54574dbb" id="Password" required>
-        <small>Error</small>
-    </div>
-    <div class="form-control">
-        <label for="">Confrim Password</label>
-        <input type="password" placeholder="password" id="password2" required>
-        <small>Error</small>
-     </div>
-    <button onclick="done()">Submit</button>
-    </form>
-     </div>
-     <script>
-      function done()
-      {
-         alert("Done")
-         window.location= "index.html"
-      }
-     </script>
 </body>
 </html>
