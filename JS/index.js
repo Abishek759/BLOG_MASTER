@@ -1,8 +1,13 @@
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+var password = document.getElementById('password');
+var password2 = document.getElementById('password2');
+
+var pass = document.getElementById("password");
+var msg = document.getElementById("message");
+var strength = document.getElementById("strength");
+var arrow = document.querySelector("button[type='submit']");
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -53,13 +58,7 @@ const validateInputs = () => {
         setSuccess(email);
     }
 
-    if(passwordValue === '') {
-        setError(password, 'Password is required');
-    } else if (passwordValue.length < 8 ) {
-        setError(password, 'Password must be at least 8 character.')
-    } else {
-        setSuccess(password);
-    }
+   
 
     if(password2Value === '') {
         setError(password2, 'Please confirm your password');
@@ -71,3 +70,39 @@ const validateInputs = () => {
     }
 
 };
+
+
+
+arrow.addEventListener("click", function() {
+    if (pass.value.length === 0) {
+        alert("Tip💡: Add UPPERCASE, lowercase, symbols, letters for more secure passwords");
+    } else if (pass.value.length < 4) {
+        alert("🙅🏻‍♀️Password seems to be weak, Try more secure passwords.");
+    } else if (pass.value.length >= 6 && pass.value.length < 12) {
+        alert("📈Password seems to be medium, update it to be more secure.");
+    } else if (pass.value.length >= 15 )  {
+        alert("Account Created");
+    } 
+});
+
+pass.addEventListener("input", () => {
+    if (pass.value.length > 0) {
+        msg.style.display = "block";
+    } else {
+        msg.style.display = "none";
+    }
+
+    if (pass.value.length < 4) {
+        strength.innerHTML = "Weak";
+        pass.style.borderColor="#ff5925";
+        msg.style.color="#ff5925";
+    } else if (pass.value.length >= 6 && pass.value.length < 12) {
+        strength.innerHTML = "Medium";
+        pass.style.borderColor="orange";
+        msg.style.color="orange";
+    } else if (pass.value.length >= 12) {
+        strength.innerHTML = "Strong";
+        pass.style.borderColor="#26d730";
+        msg.style.color="#26d730";
+    }
+});
